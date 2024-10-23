@@ -38,7 +38,7 @@ Inside the main script, you can configure the following settings:
 
 4. Key Functions:-
 
-A) Trading Logic
+a) Trading Logic
 
 1. Pattern Recognition: Detects chart patterns such as wedges, double bottoms, head and shoulders, and symmetrical triangles.
 2. Heiken Ashi Trend Confirmation: After a pattern is detected, Heiken Ashi candles are used to confirm the trend (bullish or bearish).
@@ -48,7 +48,7 @@ A) Trading Logic
 
        place_order_on_breakout(symbol, side, pattern_target) : This function places a market order and calculates take profit and stop loss based on the breakout pattern target.
 
-B) Indicators Used:-
+b) Indicators Used:-
 
 	Heiken Ashi Candles: For trend detection.
 	MACD: Confirms the momentum of the trend.
@@ -56,7 +56,7 @@ B) Indicators Used:-
 	RSI Divergence: Identifies potential divergence for trend reversals.
 	Volume: Confirms breakouts with high volume.
 
-C) Example Workflow:-
+c) Example Workflow:-
 
 	1. The bot fetches data from Bybit and looks for chart patterns in the price action.
  
@@ -68,7 +68,7 @@ C) Example Workflow:-
  
 	5. Stop loss (SL) is dynamically adjusted to protect against major losses.
 
-D) How to Run the Bot:-
+d) How to Run the Bot:-
 
 1. Clone the repository to your local machine:
 2. Git clone https://github.com/yourusername/crypto-trading-bot.git
