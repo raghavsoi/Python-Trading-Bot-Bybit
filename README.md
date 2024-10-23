@@ -41,7 +41,7 @@ a) Trading Logic
 2. Heiken Ashi Trend Confirmation: After a pattern is detected, Heiken Ashi candles are used to confirm the trend (bullish or bearish).
 3. False Breakout Detection: Before placing any order, the bot checks several indicators to detect potential false breakouts.
 
-Trading Execution
+Trading Execution:-
 
 	place_order_on_breakout(symbol, side, pattern_target): This function places a market order and calculates take profit and stop loss based on the breakout pattern target.
 
@@ -61,14 +61,12 @@ Example Workflow:-
 	4.	The bot sets the take profit (TP) before the pattern completes to lock in profits.
 	5.	Stop loss (SL) is dynamically adjusted to protect against major losses.
 
-How to Run the Bot
+How to Run the Bot:-
 
-	1.	Clone the repository to your local machine:
-
-git clone https://github.com/yourusername/crypto-trading-bot.git
-cd crypto-trading-bot
-
-	2.	Install the required dependencies:
+1. Clone the repository to your local machine:
+2. git clone https://github.com/yourusername/crypto-trading-bot.git
+3. cd crypto-trading-bot
+4. Install the required dependencies:
 
 pip install -r requirements.txt
 
@@ -81,5 +79,5 @@ python trading_bot.py
 
 Notes
 
-	•	Risk Disclaimer: Trading cryptocurrencies involves significant risk. Ensure that you understand the risks involved before using this bot.
-	•	For Educational Use Only: This bot is provided as-is for educational purposes. The authors are not responsible for any financial losses incurred through its use.
+Risk Disclaimer: Trading cryptocurrencies involves significant risk. Ensure that you understand the risks involved before using this bot.
+For Educational Use Only: This bot is provided as-is for educational purposes. The authors are not responsible for any financial losses incurred through its use.
