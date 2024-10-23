@@ -20,32 +20,35 @@ Requirements:-
 
 Configuration:-
 
-     API Keys: Set your API keys in the keys.py file in the format:
+API Keys: Set your API keys in the keys.py file in the format:
 
-api = "YOUR API KEY"
-secret = "YOUR SECRET KEY"
+    api = "YOUR API KEY"
+    secret = "YOUR SECRET KEY"
 
 
-	Trading Configurations: Inside the main script, you can configure the following settings:
-	leverage: Leverage used for trading.
-	qty: Amount of USDT for one order.
-	timeframe: Timeframe for candle data (default: 15 minutes).
-	max_pos: Maximum number of open positions at any given time.
-	pattern_target_pct: Fraction of the pattern target to take profit before completion.
+3. Trading Configurations:-
 
-Key Functions:-
+Inside the main script, you can configure the following settings:
 
-a) Trading Logic
+     leverage: Leverage used for trading.
+     qty: Amount of USDT for one order.
+     timeframe: Timeframe for candle data (default: 15 minutes). 
+     max_pos: Maximum number of open positions at any given time.
+     pattern_target_pct: Fraction of the pattern target to take profit before completion.
+
+4. Key Functions:-
+
+A) Trading Logic
 
 1. Pattern Recognition: Detects chart patterns such as wedges, double bottoms, head and shoulders, and symmetrical triangles.
 2. Heiken Ashi Trend Confirmation: After a pattern is detected, Heiken Ashi candles are used to confirm the trend (bullish or bearish).
 3. False Breakout Detection: Before placing any order, the bot checks several indicators to detect potential false breakouts.
 
-Trading Execution:-
+5. Trading Execution:-
 
-	place_order_on_breakout(symbol, side, pattern_target): This function places a market order and calculates take profit and stop loss based on the breakout pattern target.
+       place_order_on_breakout(symbol, side, pattern_target) : This function places a market order and calculates take profit and stop loss based on the breakout pattern target.
 
-Indicators Used:-
+B) Indicators Used:-
 
 	Heiken Ashi Candles: For trend detection.
 	MACD: Confirms the momentum of the trend.
@@ -53,31 +56,36 @@ Indicators Used:-
 	RSI Divergence: Identifies potential divergence for trend reversals.
 	Volume: Confirms breakouts with high volume.
 
-Example Workflow:-
+C) Example Workflow:-
 
-	1.	The bot fetches data from Bybit and looks for chart patterns in the price action.
-	2.	If a pattern is detected, it checks for a valid breakout using indicators (e.g., MACD, Bollinger Bands, RSI).
-	3.	After confirming the trend with Heiken Ashi candles, the bot places a buy or sell order.
-	4.	The bot sets the take profit (TP) before the pattern completes to lock in profits.
-	5.	Stop loss (SL) is dynamically adjusted to protect against major losses.
+	1. The bot fetches data from Bybit and looks for chart patterns in the price action.
+ 
+	2. If a pattern is detected, it checks for a valid breakout using indicators (e.g., MACD, Bollinger Bands, RSI).
+ 
+	3. After confirming the trend with Heiken Ashi candles, the bot places a buy or sell order.
+ 
+	4. The bot sets the take profit (TP) before the pattern completes to lock in profits.
+ 
+	5. Stop loss (SL) is dynamically adjusted to protect against major losses.
 
-How to Run the Bot:-
+D) How to Run the Bot:-
 
 1. Clone the repository to your local machine:
-2. git clone https://github.com/yourusername/crypto-trading-bot.git
+2. Git clone https://github.com/yourusername/crypto-trading-bot.git
 3. cd crypto-trading-bot
 4. Install the required dependencies:
 
-pip install -r requirements.txt
+       pip install -r requirements.txt
 
 
-	3.	Edit keys.py to include your Bybit API key and secret.
-	4.	Run the bot:
+5. Edit keys.py to include your Bybit API key and secret.
+6. Run the bot:
 
-python trading_bot.py
+       python trading_bot.py
 
 
-Notes
+Notes:-
 
-Risk Disclaimer: Trading cryptocurrencies involves significant risk. Ensure that you understand the risks involved before using this bot.
-For Educational Use Only: This bot is provided as-is for educational purposes. The authors are not responsible for any financial losses incurred through its use.
+1. Risk Disclaimer: Trading cryptocurrencies involves significant risk. Ensure that you understand the risks involved before using this bot.
+
+2. For Educational Use Only: This bot is provided as-is for educational purposes. The authors are not responsible for any financial losses incurred through its use.
