@@ -2,58 +2,58 @@ Crypto Trading Bot for Bybit (With Heiken Ashi, Pattern Recognition, and False B
 
 This is an advanced Python-based crypto trading bot designed for Bybit’s unified trading API. It uses technical indicators, Heiken Ashi candles, pattern recognition (e.g., wedges, double bottoms, head and shoulders), and a robust false breakout detection mechanism to make automated trades on the derivatives market.
 
-Features
+Features:-
 
-	•	Pattern Recognition: Detects various chart patterns like rising wedge, double bottom, symmetrical triangle, and more. Trades are executed based on pattern breakouts.
-	•	Heiken Ashi Integration: Filters out noise and confirms trends to avoid entering trades in the wrong direction.
-	•	False Breakout Detection: Uses indicators such as MACD, Bollinger Bands, Volume, and RSI Divergence to confirm the legitimacy of a breakout, reducing false signals.
-	•	Customizable Trading Strategy: Supports dynamic take-profit (TP) and stop-loss (SL) levels based on pattern targets, customizable leverage, and order quantity.
-	•	Enhanced Logging: Provides detailed logs of all actions, including pattern detections, trade execution, and API connection issues.
+1. Pattern Recognition: Detects various chart patterns like rising wedge, double bottom, symmetrical triangle, and more. Trades are executed based on pattern breakouts.
+2. Heiken Ashi Integration: Filters out noise and confirms trends to avoid entering trades in the wrong direction.
+3. False Breakout Detection: Uses indicators such as MACD, Bollinger Bands, Volume, and RSI Divergence to confirm the legitimacy of a breakout, reducing false signals.
+4. Customizable Trading Strategy: Supports dynamic take-profit (TP) and stop-loss (SL) levels based on pattern targets, customizable leverage, and order quantity.
+5. Enhanced Logging: Provides detailed logs of all actions, including pattern detections, trade execution, and API connection issues.
 
-Requirements
+Requirements:-
 
-Make sure to install the following dependencies before running the bot:
+1. Make sure to install the following dependencies before running the bot:
 
-pip install pybit pandas ta-lib numpy
+       pip install pybit pandas ta-lib numpy
 
-You will also need a Bybit account and API keys to connect the bot to Bybit’s trading environment.
+2. You will also need a Bybit account and API keys to connect the bot to Bybit’s trading environment.
 
-Configuration
+Configuration:-
 
-	1.	API Keys: Set your API keys in the keys.py file in the format:
+     API Keys: Set your API keys in the keys.py file in the format:
 
 api = "YOUR API KEY"
 secret = "YOUR SECRET KEY"
 
 
-	2.	Trading Configurations: Inside the main script, you can configure the following settings:
-	•	leverage: Leverage used for trading.
-	•	qty: Amount of USDT for one order.
-	•	timeframe: Timeframe for candle data (default: 15 minutes).
-	•	max_pos: Maximum number of open positions at any given time.
-	•	pattern_target_pct: Fraction of the pattern target to take profit before completion.
+	Trading Configurations: Inside the main script, you can configure the following settings:
+	leverage: Leverage used for trading.
+	qty: Amount of USDT for one order.
+	timeframe: Timeframe for candle data (default: 15 minutes).
+	max_pos: Maximum number of open positions at any given time.
+	pattern_target_pct: Fraction of the pattern target to take profit before completion.
 
-Key Functions
+Key Functions:-
 
-Trading Logic
+a) Trading Logic
 
-	•	Pattern Recognition: Detects chart patterns such as wedges, double bottoms, head and shoulders, and symmetrical triangles.
-	•	Heiken Ashi Trend Confirmation: After a pattern is detected, Heiken Ashi candles are used to confirm the trend (bullish or bearish).
-	•	False Breakout Detection: Before placing any order, the bot checks several indicators to detect potential false breakouts.
+1. Pattern Recognition: Detects chart patterns such as wedges, double bottoms, head and shoulders, and symmetrical triangles.
+2. Heiken Ashi Trend Confirmation: After a pattern is detected, Heiken Ashi candles are used to confirm the trend (bullish or bearish).
+3. False Breakout Detection: Before placing any order, the bot checks several indicators to detect potential false breakouts.
 
 Trading Execution
 
-	•	place_order_on_breakout(symbol, side, pattern_target): This function places a market order and calculates take profit and stop loss based on the breakout pattern target.
+	place_order_on_breakout(symbol, side, pattern_target): This function places a market order and calculates take profit and stop loss based on the breakout pattern target.
 
-Indicators Used
+Indicators Used:-
 
-	•	Heiken Ashi Candles: For trend detection.
-	•	MACD: Confirms the momentum of the trend.
-	•	Bollinger Bands: Detects breakouts outside the upper or lower bands.
-	•	RSI Divergence: Identifies potential divergence for trend reversals.
-	•	Volume: Confirms breakouts with high volume.
+	Heiken Ashi Candles: For trend detection.
+	MACD: Confirms the momentum of the trend.
+	Bollinger Bands: Detects breakouts outside the upper or lower bands.
+	RSI Divergence: Identifies potential divergence for trend reversals.
+	Volume: Confirms breakouts with high volume.
 
-Example Workflow
+Example Workflow:-
 
 	1.	The bot fetches data from Bybit and looks for chart patterns in the price action.
 	2.	If a pattern is detected, it checks for a valid breakout using indicators (e.g., MACD, Bollinger Bands, RSI).
