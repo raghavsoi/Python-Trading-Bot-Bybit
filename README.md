@@ -71,8 +71,8 @@ c) Example Workflow:-
 d) How to Run the Bot:-
 
 1. Clone the repository to your local machine:
-2. Git clone https://github.com/yourusername/crypto-trading-bot.git
-3. cd crypto-trading-bot
+2. Git clone https://github.com/raghavsoi/Python-Trading-Bot-Bybit.git
+3. cd Python-Trading-Bot-Bybit
 4. Install the required dependencies:
 
        pip install -r requirements.txt
@@ -81,7 +81,7 @@ d) How to Run the Bot:-
 5. Edit keys.py to include your Bybit API key and secret.
 6. Run the bot:
 
-       python trading_bot.py
+        Python-Trading-Bot-Bybit.py
 
 
 Notes:-
