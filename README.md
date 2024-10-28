@@ -1,5 +1,6 @@
 Crypto Trading Bot for Bybit (With Heiken Ashi, Pattern Recognition, and False Breakout Detection)
 
+
 This is an advanced Python-based crypto trading bot designed for Bybit’s unified trading API. It uses technical indicators, Heiken Ashi candles, pattern recognition (e.g., wedges, double bottoms, head and shoulders), and a robust false breakout detection mechanism to make automated trades on the derivatives market.
 
 Features:-
@@ -81,7 +82,7 @@ d) How to Run the Bot:-
 5. Edit keys.py to include your Bybit API key and secret.
 6. Run the bot:
 
-        Python-Trading-Bot-Bybit.py
+        BYBIT-Trading-bot.py
 
 
 Notes:-
